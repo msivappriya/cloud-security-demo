@@ -20,7 +20,7 @@ Parameters:
   Ec2ImageId:
     Type: String
     Description: AMI ID for EC2 instance
-    Default: ami-08b5b3a93ed654d19 # Replace with your desired AMI
+    Default: ami-08b5b3a93ed654d19
   Ec2InstanceType:
     Type: String
     Default: t2.micro
@@ -169,6 +169,6 @@ Outputs:
   Ec2InstanceId:
     Value: !Ref Ec2Instance
   DbEndpointAddress:
-    Value: !GetAtt DbInstance.Endpoint.Addr
+    Value: !GetAtt DbInstance.Endpoint.Address
   DbEndpointPort:    
     Value: !GetAtt DbInstance.Endpoint.Port
